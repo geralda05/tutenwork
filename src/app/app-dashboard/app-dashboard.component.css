@@ -1,0 +1,282 @@
+  /* ESTILOS BASICOS */
+  h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+  }
+  
+  /* PADDING REUTILIZABLE */
+  .pl-40px{
+    padding-left:44px;
+  }
+  .px-i-15{
+    padding-right:15% !important;
+    padding-left:15% !important;
+  }
+  
+  /* CODIGO CSS DEL FORMULARIO */
+  .icon-form{
+    position:absolute;
+    margin-top:-53px;
+    margin-left:10px;
+  }
+  .input-login{
+    border-radius:10px !important;
+    border:0;
+  }
+  .input-login:focus > .icon-form{
+    color:#17a2b8 !important;
+  }
+  .input-login:active ~ .icon-form{
+    color:#17a2b8 !important;
+  }
+  .input-login:focus ~ .icon-form{
+    color:#17a2b8 !important;
+  }
+  .input-login:active > .icon-form{
+    color:#17a2b8 !important;
+  }
+  
+  /* CODIGO CSS ADICIONAL DE SLIDER */
+  .bg-slider-img{
+    background-size:cover;
+    background-position:center;
+  }
+  .bg-slider-cont{
+    visibility:hidden;
+    height:0;
+    transition: height ease .5s;
+    background-color:rgba(1,1,1,.5);
+  }
+  .bg-slider-img:hover > .bg-slider-cont{
+    visibility:visible !important;
+    height:100%;
+  }
+  .bg-slider-img:hover ~ .bg-slider-cont{
+    visibility:visible !important;
+    height:100%;
+  }
+  .maxw-slider{
+    max-width:1400px;
+  }
+  .border-radius-slide{
+    border-radius:15px;
+  }
+
+    /* ESTILOS BÁSICOS DE LA APLICACION */
+    .app-Inicio-style {
+      font-family: 'Raleway', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+    }
+    
+    /* CLASES PARA MEDIDAS REUTILIZABLES */
+    .h-100vh{
+      height:100vh;  
+    }
+    .minh-100vh{
+      min-height:100vh;  
+    }
+    .minh-200px{
+      min-height:200px;
+    }
+    .maxw-form{
+      max-width:450px;
+    }
+    
+    /* BACKGROUND TIPO PARALLAX */
+    .background-parallax{
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position:center;
+      background-attachment: fixed;
+    }
+    
+    /* CLASES DE FLEXBOX PARA MANEJAR CONTENIDO */
+    .j-center{
+      justify-content:center;
+      align-items:center;
+    }
+    .df-items-start{
+      align-items:flex-start;
+    }
+    .overflow-h{
+      overflow:hidden;
+    }
+    .overflow-x-h{
+      overflow-x:hidden;
+    }
+    
+    /* BACKGROUNDS CON IMAGENES ESTATICAS */
+    .background-inicio-1{
+      background-image:url('../assets/santiago.jpg');
+    }
+    .background-inicio-2{
+      background-image:url('../assets/new.jpg');
+    }
+    .sl-img1{
+      background-image:url('../assets/newyork.jpg');
+    }
+    .sl-img2{
+      background-image:url('../assets/lax.jpg');
+    }
+    .sl-img3{
+      background-image:url('../assets/seattle.jpg');
+    }
+    .sl-img4{
+      background-image:url('../assets/toronto.jpg');
+    }
+    .sl-img5{
+      background-image:url('../assets/vancouver.jpg');
+    }
+    .sl-img6{
+      background-image:url('../assets/montreal.jpg');
+    }
+    .sl-img7{
+      background-image:url('../assets/shanghai.jpg');
+    }
+    .sl-img8{
+      background-image:url('../assets/beijing.jpg');
+    }
+    .sl-img9{
+      background-image:url('../assets/tokio.jpg');
+    }
+    
+    /* BACKGROUNDS PARA DAR OPACIDAD AL FONDO DEL DIV */
+    .bg-white-opacity-2{
+      background-color:rgba(255,255,255,.65);
+    }
+    .bg-opacity{
+      background-color:rgba(1,1,1,.5);
+    }
+    .bg-opacity-white{
+        background-color:rgba(255,255,255,.7);
+    }
+    
+    /* CLASES PARA TAMAÑOS DE FUENTES REUTILIZABLES */
+    .fs-30{
+      font-size:3rem;
+    }
+    .fs-20{
+      font-size:2rem;
+    }
+    .fs-15{
+      font-size:1.5rem;
+    }
+    .fs-13{
+      font-size:1.3rem;
+    }
+    
+    /* CODIGO CSS DE ALERTS Y ANIMACIONES */
+    .alert-redcapital {
+      border-bottom-right-radius: 2px;
+      border-left: 4px solid;
+      border-top-right-radius: 2px;
+      line-height: 1.6em;
+      z-index: 1;
+    }
+    
+    .redcapital-success:before{
+        content: "!";
+        font-family: "Font Awesome 5 Free";
+        background-color:green;
+    }
+    .redcapital-success{
+      border-left-color: green;
+        border-right: 3px solid green;
+        border-top: 3px solid green;
+        border-bottom: 3px solid green;
+        padding:12px 14px 12px 30px;
+        background-color:#E9FFB9;  
+        color: green;
+        font-weight:600;
+        position:fixed;
+        border-radius:10px !important;
+        top:50px;
+        left:40%; 
+        z-index:102;
+    }
+    .redcapital-login{
+      border-left-color: #f66;
+      padding:12px 24px 12px 30px;
+      background-color:#f8f8f8;
+      position:relative;
+      margin-top:-1.5rem;
+    }
+    .redcapital-login:before{
+      background-color:#f66;
+    }
+    .redcapital-success:before{
+      background-color:green;
+    }
+    .alert-redcapital:before{
+      content: "!";
+      font-family: "Font Awesome 5 Free";
+      border-radius:100%;
+      color:#fff;
+      font-size:22px;  
+      font-weight:bold;
+      height:25px;
+      left:-14px;
+      line-height:20px;
+      position:absolute;
+      text-align: center;
+      top: calc(50% - 14px);
+      width:25px;
+    }
+    .scale-transform-1:hover{
+      transform: scale(1.1);
+    }
+    .icon-animation:hover {
+        -webkit-animation: pulse .6s infinite alternate;
+        -moz-animation: pulse .6s infinite alternate;
+        -ms-animation: pulse .6s infinite alternate;
+        -o-animation: pulse .6s infinite alternate;
+        animation: pulse .6s infinite alternate;
+    }
+    
+    @-webkit-keyframes pulse {
+      from {transform: scale(1);}
+      to {transform: scale(1.1);}
+    }
+    @-moz-keyframes pulse {
+      from {transform: scale(1);}
+      to {transform: scale(1.1);}
+    }
+    @-ms-keyframes pulse {
+      from {transform: scale(1);}
+      to {transform: scale(1.1);}
+    }
+    @-o-keyframes pulse {
+      from {transform: scale(1);}
+      to {transform: scale(1.1);}
+    }
+    @keyframes pulse {
+      from {transform: scale(1);}
+      to {transform: scale(1.1);}
+    }
+
+    /* ESTILOS PARA ENLACES */
+.color-link-b{
+    color: #007bff !important;
+    cursor:pointer;
+}
+
+/* ESTILOS ADICIONALES */
+.border-l-title{
+    border-left:2px solid black;
+}
+.w-responsive-cl{
+    max-width:900px;
+}

@@ -1,0 +1,146 @@
+<div class="app-Inicio-style">
+<div class="w-100 minh-100vh background-parallax background-inicio-1">
+  <div class="bg-opacity w-100 minh-100vh d-flex df-items-start">
+    <div class="w-100">
+      <div class="w-100 h-100vh d-flex j-center overflow-h">
+        <div class="w-100 overflow-x-h">
+          <p class="text-white fs-30 wow slideInLeft delay-1s">devTUTEN</p>
+          <p class="text-white fs-20 wow slideInRight delay-1s">Conoce todo lo que tenemos para ti</p>
+          <p class="text-white wow slideInRight delay-1s">SWIPE TO LOGIN</p>
+        </div>
+      </div>
+      <div class="p-3 w-100 bg-white-opacity-2">
+        <div class="w-100 row m-0 p-0 overflow-h">
+          <div class="col-12 col-sm-6 d-flex j-center wow slideInLeft delay-1s">
+            <form class="maxw-form text-left overflow-x-h" (ngSubmit)="onSubmit()" #inicio="ngForm"> <!--  v-on:submit.prevent="postLogin()" -->
+              <p class="fs-20 text-center font-weight-bold">Accede a nuestros posts destacados</p>
+              <p class="alert-redcapital redcapital-login text-left mt-3 ml-1 font-weight-bold fs-13 animated slideInLeft delay-1s" *ngIf="message != ''">{{message}}</p> <!-- v-if="message" -->
+              <div class="w-100">
+                <input id="name" value="testapis@tuten.cl" disabled class="w-100 form-control mb-3 pl-40px input-login fs-15" placeholder="Inserte su usuario" type="text"/> <!-- v-model="login.user" -->
+                <i class="fas fs-15 fa-user icon-form"></i>
+              </div>
+              <hr noshade size="2"  />
+              <div class="w-100">
+                <input [(ngModel)]="pass" name="pass"  class="w-100 form-control mb-3 pl-40px input-login fs-15" placeholder="Escriba su contraseña" type="password"/> <!-- v-model="login.password" -->
+                <i class="fas fs-15 fa-lock icon-form"></i>
+              </div>
+              <button type="submit" class="btn btn-info w-100 fs-15 mb-4">ENTRAR</button>
+
+            </form>
+          </div>
+          <div class="col-12 col-sm-6 d-flex j-center wow slideInRight delay-1s">
+            <p class="fs-15 font-weight-bold w-100 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          </div>
+        </div>
+        </div>
+        <div class="p-4 pt-5 w-100">
+          <p class="fs-20 text-center text-white font-weight-bold">Conoce nuestros destinos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-4">
+  </div>
+  <div class="w-100 minh-100vh background-parallax background-inicio-2">
+    <div class="bg-opacity w-100 minh-100vh d-flex df-items-start overflow-h">
+      <div id="carouselExampleIndicators" class="minh-100vh carousel slide w-100 wow slideInUp delay-2s" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner minh-100vh">
+          <div class="carousel-item minh-100vh active">
+            <div class="d-flex j-center minh-100vh">
+              <div class="row p-0 px-i-15 m-0 maxw-slider w-100 overflow-h">
+                <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                  <div class="bg-slider-img sl-img1 border-radius-slide w-100 d-flex animated fadeInLeftBig delay-1s">
+                    <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                      <p class="text-center fs-20 text-white w-100">New York</p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img2 border-radius-slide w-100 d-flex animated fadeInDownBig delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img3 border-radius-slide w-100 d-flex animated fadeInRightBig delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Seattle</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item minh-100vh">
+          <div class="d-flex j-center minh-100vh">
+            <div class="row p-0 px-i-15 m-0 maxw-slider w-100 overflow-h">
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img4 border-radius-slide w-100 d-flex animated fadeInUpBig delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Toronto</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img5 border-radius-slide w-100 d-flex animated fadeInDownBig delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Vancouver</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img6 border-radius-slide w-100 d-flex animated fadeInUpBig delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Montreal</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item minh-100vh">
+          <div class="d-flex j-center minh-100vh">
+            <div class="row p-0 px-i-15 m-0 maxw-slider w-100 overflow-h">
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img7 border-radius-slide w-100 d-flex animated bounceInLeft delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Shanghai</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img8 border-radius-slide w-100 d-flex animated bounceInUp delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Beijing</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-4 p-2 d-flex minh-200px mx-auto">
+                <div class="bg-slider-img sl-img9 border-radius-slide w-100 d-flex animated bounceInRight delay-1s">
+                  <div class="bg-slider-cont w-100 p-3 d-flex j-center">
+                    <p class="text-center fs-20 text-white w-100">Tokio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>    
+</div>

@@ -1,0 +1,76 @@
+<div>
+  <div class="w-100 minh-100vh background-parallax background-inicio-1">
+      <div class="bg-opacity-white w-100 minh-100vh d-flex df-items-start">
+          <div class="w-100 m-auto p-4">
+              <div class="ml-2 border-l-title pl-4 mb-4 mt-2 row overflow-h"  >
+                  <div class="col-12 col-sm-8 col-md-9 col-lg-10 pl-0 wow slideInLeft delay-1s">
+                      <p class="text-left fs-30 mb-0"><strong>Posts 2019</strong></p>
+                      <p class="text-left fs-20">Informacion justa y veráz</p>
+                  </div>
+                  <div class="col-12 col-sm-4 col-md-3 col-lg-2 d-flex df-items-start pl-0 wow slideInRight delay-1s">
+                      <div class="w-100">
+                          <button class="btn btn-success btn-logout fs-15 ml-auto w-100 mb-1" data-toggle="modal" data-target="#newPostModal"><span><i class="fas fa-folder-plus mr-3 ml-1"></i>New post</span></button>
+                          <button class="btn btn-danger btn-logout fs-15 ml-auto w-100" (click)="getLogout()"><span><i class="fas fa-sign-out-alt mr-3 ml-1"></i>Logout</span></button>
+                      </div>
+                  </div>
+              </div>
+              <div class="w-100 overflow-h" *ngIf="loading === '1'" >
+                  <p class="fs-30 mt-3 wow slideInLeft delay-1s"><i class="fas fa-circle-notch fa-spin fs-30 mr-3"></i>Buscando posts...</p>
+              </div>
+              <div *ngIf="statuserror != ''" class="w-100 overflow-h"  >
+                  <p class="fs-30 mt-3 wow slideInRight delay-1s"><i class="fas fa-exclamation-circle fs-30 mr-3"></i>{{statuserror}}</p>
+              </div> 
+              <div  class="w-100 overflow-h" *ngIf="resultados.length === 0 && loading == '' && statuserror == ''">
+                  <p class="fs-30 mt-3 wow slideInRight delay-1s"><i class="fas fa-exclamation-circle fs-30 mr-3"></i>No hay posts registrados</p>
+              </div>
+              <div class="w-100 d-flex df-items-start" >
+                <div class="w-responsive-cl mx-auto w-100 overflow-h" >
+                    <div class="row m-0 p-0 wow slideInUp delay-2s" style="animation-duration: 1s;">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2 mx-auto d-flex icon-animation" *ngFor="let book of resultados">
+                            <div class="card w-100">
+                                <div class="card-header">
+                                    <h5 class="card-title text-left">Post N° {{book.bookingId}}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-subtitle text-muted">{{book.firstName}} {{book.LastName}} {{book.bookingTime}} {{book.streetAddress}} {{book.bookingPrice}}</h6>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    <span class="color-link-b card-link"><i class="fas fa-trash-alt mr-2"></i>Eliminar</span> <!-- v-on:click="deletePosts(post.id)" -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            </div>
+        </div>
+        <div class="modal fade" id="newPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <form (ngSubmit)="sendPost()" #appdashboard="ngForm" class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-15" id="exampleModalCenterTitle">Nuevo Post</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <span class="fs-15">Nombre</span>
+                        <input [(ngModel)]="newName" name="newName" class="form-control w-100 fs-15" type="text" required />
+                                                <span class="fs-15">Apellido</span>
+                        <input [(ngModel)]="newLname" name="newLname" class="form-control w-100 fs-15" type="text" required />
+<span class="fs-15">Fecha</span>
+                        <input [(ngModel)]="newTime" name="newTime" class="form-control w-100 fs-15" type="text" required />
+<span class="fs-15">Precio</span>
+                        <input [(ngModel)]="newPrice" name="newPrice" class="form-control w-100 fs-15" type="text" required />
+                    <span class="fs-15">Dirección</span>
+                        <input [(ngModel)]="newAddress" name="newAddress" class="form-control w-100 fs-15" type="text" required />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form> -->
+          </div>
+      </div>
+  </div>
