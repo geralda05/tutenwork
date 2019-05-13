@@ -179,7 +179,7 @@
     }
     
     /* CODIGO CSS DE ALERTS Y ANIMACIONES */
-    .alert-redcapital {
+    .alert-tuten {
       border-bottom-right-radius: 2px;
       border-left: 4px solid;
       border-top-right-radius: 2px;
@@ -187,12 +187,12 @@
       z-index: 1;
     }
     
-    .redcapital-success:before{
+    .tuten-success:before{
         content: "!";
         font-family: "Font Awesome 5 Free";
         background-color:green;
     }
-    .redcapital-success{
+    .tuten-success{
       border-left-color: green;
         border-right: 3px solid green;
         border-top: 3px solid green;
@@ -207,20 +207,20 @@
         left:40%; 
         z-index:102;
     }
-    .redcapital-login{
+    .tuten-login{
       border-left-color: #f66;
       padding:12px 24px 12px 30px;
       background-color:#f8f8f8;
       position:relative;
       margin-top:-1.5rem;
     }
-    .redcapital-login:before{
+    .tuten-login:before{
       background-color:#f66;
     }
-    .redcapital-success:before{
+    .tuten-success:before{
       background-color:green;
     }
-    .alert-redcapital:before{
+    .alert-tuten:before{
       content: "!";
       font-family: "Font Awesome 5 Free";
       border-radius:100%;
