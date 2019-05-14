@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { Router } from '@angular/router';
 import WOW from 'wow.js';
+declare var $;
 
 @Component({
   selector: 'app-app-dashboard',
   templateUrl: './app-dashboard.component.html',
-  styleUrls: ['./app-dashboard.component.css']
+  styleUrls: ['./app-dashboard.component.css'],
 })
 
 export class AppDashboardComponent implements OnInit {
@@ -31,7 +32,7 @@ export class AppDashboardComponent implements OnInit {
       var self = this;
       let newPostID = (self.resultados.length + 1);
       this.resultados.push({"bookingId":newPostID.toString(), "firstName":self.newName, "LastName":self.newLname, "bookingTime":self.newTime, "streetAddress":self.newAddress, "bookingPrice":self.newPrice});
-    //  $('#newPostModal').modal('hide');
+      $('#newPostModal').modal('hide');
       this.success = '';
       this.newName = '';
       this.newLname = '';
@@ -48,6 +49,7 @@ export class AppDashboardComponent implements OnInit {
   ngOnInit() {
     new WOW().init();
     var self = this;
+    // COMENTAR A PARTIR DE ESTA LINEA DE CODIGO SI SE DESEA PROBAR EL PANEL ADMIN 
     if(localStorage.acceso_token_tuten){
       let userID = localStorage.getItem('acceso_token_tuten');
       let reallyToken = JSON.parse(JSON.stringify(userID));
@@ -70,9 +72,9 @@ export class AppDashboardComponent implements OnInit {
           function (error){
             self.statuserror = error;
       });
-    }else{
+    }else{ 
       self.router.navigate(['/inicio']);
-    }
+    }  // HASTA AQUI
   }
 
 }

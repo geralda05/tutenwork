@@ -16,7 +16,7 @@
               <p class="fs-20 text-center font-weight-bold">Accede a nuestros posts destacados</p>
               <p class="alert-tuten tuten-login text-left mt-3 ml-1 font-weight-bold fs-13 animated slideInLeft delay-1s" *ngIf="message != ''">{{message}}</p> <!-- v-if="message" -->
               <div class="w-100">
-                <input id="name" value="testapis@tuten.cl" disabled class="w-100 form-control mb-3 pl-40px input-login fs-15" placeholder="Inserte su usuario" type="text"/> <!-- v-model="login.user" -->
+                <input id="name" [(ngModel)]="user" name="user" class="w-100 form-control mb-3 pl-40px input-login fs-15" placeholder="Inserte su usuario" type="text"/> <!-- v-model="login.user" -->
                 <i class="fas fs-15 fa-user icon-form"></i>
               </div>
               <hr noshade size="2"  />

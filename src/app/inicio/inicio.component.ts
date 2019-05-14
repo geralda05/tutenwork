@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class InicioComponent implements OnInit {
   message: string = '';
-  user: string = '';
+  user: string = 'testapis@tuten.cl';
   pass: string = '';
   loading: string = '';
   constructor(
@@ -23,10 +23,10 @@ export class InicioComponent implements OnInit {
     localStorage.removeItem('acceso_token_tuten');
     axios({
       method:'put',
-      url:'https://dev.tuten.cl/TutenREST/rest/user/testapis%40tuten.cl',
+      url:'https://dev.tuten.cl/TutenREST/rest/user/'+encodeURIComponent(self.user),
       headers:{
         "password": self.pass,
-        "app": "APP_BCK",
+        "app": "APP_BCK", 
       }
     }).then(
       function (response){
